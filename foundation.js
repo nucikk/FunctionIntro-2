@@ -11,7 +11,7 @@ let calculatePositiveSum  = (...values) =>
 
 // ^* -- დადებითი რიცხვების ჯამის გამოთვლა 
   let positiveNumSum = calculatePositiveSum (...numbersArray1);
-  console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum) //^ 131
+  console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum) //^ Output: 131
 
 
 //! #TASK2: ფუნქციის საშულებით გამოიტანეთ ყველა რიცხვის ჯამი: 10, 50, 6, 7, 8, 11, 6, 3, 9
@@ -23,12 +23,13 @@ let numbersToSum  = [10, 50, 6, 7, 8, 11, 6, 3, 9];
 let calculateSum  = (...numbers) => numbers.reduce((sum, num) => sum + num, 0)
 let totalSum = calculateSum(...numbersToSum);
 
-console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum) //^ 110
+console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum) //^  Output: 110
 
 
 //! #TASK3:ფუნქციამ უნდა დააბრუნოს სახელი და გვარი ადგილის გამოტოვებით (მაგ: 'giorgi saakadze')
 //! თუ isloggedin არის true და false თუ isloggedin ფროფერთი არის false; let user = {firstname: 'giorgi',lastname: 'saakadze',age: 32,isloggedin: true}
-	
+
+//& ობიექტი user-ის ინფორმაცით
 let user = {
     firstname: 'giorgi',
     lastname: 'saakadze',
@@ -36,6 +37,7 @@ let user = {
     isloggedin: true
   };
 
+//^* getUserName ფუნქცია დააბრუნებს მომხარებლის FullName-ს თუ isloggedin იქნება true
 function getUserName(user) {
     if(user.isloggedin) {
        return `${user.firstname} ${user.lastname}`
@@ -44,4 +46,19 @@ function getUserName(user) {
     
 }
 let isFullname = getUserName(user)
-console.log(isFullname)
+console.log(isFullname) //^  Output: giorgi saakadze
+
+//! #TASK4:შექმენით ფუნქცია რომელსაც გადაეცემა ერთი პარამეტრი. 
+//! ეს პარამეტრი უნდა იყოს რიცხვების მასივი 
+//! და ფუნქციამ უნდა დააბრუნოს ამ რიცხვებიდან მაქსიმალური
+ 
+//& რიცხვების მასივი (Found maximum value)
+let maxNumArray = [20, 8, 54, 11, 2003, 77, 22, 2023, 15];
+
+function findMaxNumber(numbers) {
+    return Math.max(...numbers); //TODO: -- Math.max გადაეცემა არგუმენტი და გამოიყენება მაქსიმალური მნიშვნელობის საპოვნელად
+}
+
+let maxNumber = findMaxNumber(maxNumArray);
+console.log(maxNumber); //^ Output: 2023
+
