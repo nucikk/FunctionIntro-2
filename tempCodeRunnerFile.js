@@ -1,9 +1,7 @@
-let numbersArray  = [2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8];
+let numbersToSum  = [10, 50, 6, 7, 8, 11, 6, 3, 9];
 
-// ^* -- ფუნქცია calculatePositiveSum დაითვლის დადებითი რიცხვების ჯამს მასივიდან
-let calculatePositiveSum  = (...values) =>
-  values.filter(value => value > 0).reduce((total, value) => total + value, 0);
+// ^* ითვლის რიცხვების მასივის ჯამს
+let calculateSum  = (...numbers) => numbers.reduce((sum, num) => sum + num, 0)
+let totalSum = calculateSum(...numbersToSum);
 
-// ^* -- დადებითი რიცხვების ჯამის გამოთვლა 
-  let positiveNumSum = calculatePositiveSum (...numbersArray);
-  console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum)
+console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum)
