@@ -14,7 +14,7 @@ let calculatePositiveSum  = (...values) =>
   console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum) //^ 131
 
 
-//! TASK2: ფუნქციის საშულებით გამოიტანეთ ყველა რიცხვის ჯამი: 10, 50, 6, 7, 8, 11, 6, 3, 9
+//! #TASK2: ფუნქციის საშულებით გამოიტანეთ ყველა რიცხვის ჯამი: 10, 50, 6, 7, 8, 11, 6, 3, 9
 
 //& შესაჯამებელი რიცხვების მასივი
 let numbersToSum  = [10, 50, 6, 7, 8, 11, 6, 3, 9];
@@ -26,3 +26,22 @@ let totalSum = calculateSum(...numbersToSum);
 console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum) //^ 110
 
 
+//! #TASK3:ფუნქციამ უნდა დააბრუნოს სახელი და გვარი ადგილის გამოტოვებით (მაგ: 'giorgi saakadze')
+//! თუ isloggedin არის true და false თუ isloggedin ფროფერთი არის false; let user = {firstname: 'giorgi',lastname: 'saakadze',age: 32,isloggedin: true}
+	
+let user = {
+    firstname: 'giorgi',
+    lastname: 'saakadze',
+    age: 32,
+    isloggedin: true
+  };
+
+function getUserName(user) {
+    if(user.isloggedin) {
+       return `${user.firstname} ${user.lastname}`
+    } 
+       return false;
+    
+}
+let isFullname = getUserName(user)
+console.log(isFullname)

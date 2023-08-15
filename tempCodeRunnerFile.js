@@ -1,7 +1,16 @@
-let numbersToSum  = [10, 50, 6, 7, 8, 11, 6, 3, 9];
+let user = {
+    firstname: 'giorgi',
+    lastname: 'saakadze',
+    age: 32,
+    isloggedin: true
+  };
 
-// ^* ითვლის რიცხვების მასივის ჯამს
-let calculateSum  = (...numbers) => numbers.reduce((sum, num) => sum + num, 0)
-let totalSum = calculateSum(...numbersToSum);
-
-console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum)
+function getUserName(user) {
+    if(user.isloggedin) {
+       return `${user.firstname} ${user.lastname}`
+    } else {
+        return false
+    }
+}
+let isFullname = getUserName(user)
+console.log(isFullname)
