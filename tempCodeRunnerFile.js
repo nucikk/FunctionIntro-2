@@ -1,15 +1,8 @@
-function checkNumber(number) {
-  return typeof number === 'number'
-  ? number % 2 === 0 
-  ? 'this number is even'
-  : 'this number is odd'
-  : 'this number is not a number'
+let array = [1,2,3,4,5];
+let reverseArrayNum = [];
+
+for(let i = array.length - 1; i >= 0; i--) {
+  reverseArrayNum.push(array[i])
 }
 
-let isNumberValid1 = 8;
-let isNumberValid2 = 11;
-let isNumberValid3 = true
-
-console.log(checkNumber(isNumberValid1));
-console.log(checkNumber(isNumberValid2));
-console.log(checkNumber(isNumberValid3));
+console.log(reverseArrayNum) 

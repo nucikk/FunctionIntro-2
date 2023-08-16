@@ -11,7 +11,7 @@ let calculatePositiveSum  = (...values) =>
 
 // ^* -- დადებითი რიცხვების ჯამის გამოთვლა 
   let positiveNumSum = calculatePositiveSum (...numbersArray1);
-  console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum) //^ Output: 131
+  console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum) //^ output: 131
 
 
 //! #TASK2: ფუნქციის საშულებით გამოიტანეთ ყველა რიცხვის ჯამი: 10, 50, 6, 7, 8, 11, 6, 3, 9
@@ -23,7 +23,7 @@ let numbersToSum  = [10, 50, 6, 7, 8, 11, 6, 3, 9];
 let calculateSum  = (...numbers) => numbers.reduce((sum, num) => sum + num, 0)
 let totalSum = calculateSum(...numbersToSum);
 
-console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum) //^  Output: 110
+console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum) //^  output: 110
 
 
 //! #TASK3:ფუნქციამ უნდა დააბრუნოს სახელი და გვარი ადგილის გამოტოვებით (მაგ: 'giorgi saakadze')
@@ -46,7 +46,7 @@ function getUserName(user) {
     
 }
 let isFullname = getUserName(user)
-console.log(isFullname) //^  Output: giorgi saakadze
+console.log(isFullname) //^  output: giorgi saakadze
 
 //! #TASK4:შექმენით ფუნქცია რომელსაც გადაეცემა ერთი პარამეტრი. 
 //! ეს პარამეტრი უნდა იყოს რიცხვების მასივი 
@@ -60,7 +60,7 @@ function findMaxNumber(numbers) {
 }
 
 let maxNumber = findMaxNumber(maxNumArray);
-console.log(maxNumber); //^ Output: 2023
+console.log(maxNumber); //^ output: 2023
 
 
 //! #TASK5: დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიიღებს ერთ რიცხვს და გამოთვლის გადაცემული მნიშვნელობა კენტია თუ ლუწი;
@@ -79,6 +79,22 @@ let isNumberValue1 = 8;
 let isNumberValue2 = 11;
 let isNumberValue3 = "text"
 
-console.log(checkNumberType(isNumberValue1));
-console.log(checkNumberType(isNumberValue2));
-console.log(checkNumberType(isNumberValue3));
+console.log(checkNumberType(isNumberValue1)); //^ output: this number is even
+console.log(checkNumberType(isNumberValue2)); //^ output: this number is odd
+console.log(checkNumberType(isNumberValue3)); //^ output: this value is not a number
+
+
+
+
+//! #TASK6: მოცემულია მასივი:let array = [1,2,3,4,5]; for ციკლის საშუალებით მიიღეთ reverse ვერისია, ანუ 5,4,3,2,1
+
+let array = [1,2,3,4,5];
+//& array reversed numbers 
+let reverseArrayNum = [];
+
+//^*  For Loop - reversed array
+for(let i = array.length - 1; i >= 0; i--) {
+  reverseArrayNum.push(array[i])         //TODO: -- push() მეთოდი გამოიყენება ახალი მასივის შესაქმნელად ორიგინალური მასივის ელემენტებით, საპირისპირო თანმიმდევრობით.
+}
+
+console.log(reverseArrayNum) //^ output: [ 5, 4, 3, 2, 1 ]
