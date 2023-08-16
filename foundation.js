@@ -51,8 +51,7 @@ console.log(isFullname) //^  output: giorgi saakadze
 //! ეს პარამეტრი უნდა იყოს რიცხვების მასივი 
 //! და ფუნქციამ უნდა დააბრუნოს ამ რიცხვებიდან მაქსიმალური
  
-//& რიცხვების მასივი (Found maximum value)
-let maxNumArray = [20, 8, 54, 11, 2003, 77, 22, 2023, 15];
+let maxNumArray = [20, 8, 54, 11, 2003, 77, 22, 2023, 15]; //& რიცხვების მასივი (Found maximum value)
 
 function findMaxNumber(numbers) {
     return Math.max(...numbers); //TODO: -- Math.max გადაეცემა არგუმენტი და გამოიყენება მაქსიმალური მნიშვნელობის საპოვნელად
@@ -86,12 +85,11 @@ console.log(checkNumberType(isNumberValue3)); //^ output: this value is not a nu
 //! #TASK6: მოცემულია მასივი:let array = [1,2,3,4,5]; for ციკლის საშუალებით მიიღეთ reverse ვერისია, ანუ 5,4,3,2,1
 
 let originalArray  = [1,2,3,4,5];
-//& array reversed numbers 
-let reverseArrayNum = [];
+let reverseArrayNum = []; //& array reversed numbers 
 
 //^*  For Loop - reversed array
 for(let i = originalArray.length - 1; i >= 0; i--) {
-  reverseArrayNum.push(originalArray[i])         //TODO: -- push() მეთოდი გამოიყენება ახალი მასივის შესაქმნელად ორიგინალური მასივის ელემენტებით, საპირისპირო თანმიმდევრობით.
+  reverseArrayNum.push(originalArray[i])      //TODO: -- push() მეთოდი გამოიყენება ახალი მასივის შესაქმნელად ორიგინალური მასივის ელემენტებით, საპირისპირო თანმიმდევრობით.
 }
 
 console.log(reverseArrayNum); //^ output: [ 5, 4, 3, 2, 1 ]
@@ -108,4 +106,17 @@ let userAgeCalculated = calculateAge(birthdate)
 const statusUserAge  = checkAgeStatus(userAgeCalculated);
 
 console.log('მომხმარებლის ასაკის სტატუსი: ', statusUserAge) //^ output: მომხმარებლის ასაკის სტატუსი: სრულწლოვანი
+
+//! #TASK8:მოცემულია მასივი let array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//! ციკლის საშუალებით შეამოწმეთ, თუ ამ მასივში არის რიცხვი 5 - მაშინ დალოგეთ - ‘არის’ და გააჩერეთ ციკლი
+
+let searchedNumArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //& array searched
+
+for (let i = 0; i < searchedNumArray.length; i++) {
+  // * შემოწმდება არის თუ არა ელემენტი 5-ის ტოლი და შემდეგ გაჩერდება
+  if(searchedNumArray[i] === 5) {
+    console.log('არის')       //^ output: არის
+    break;
+  }
+}
 
