@@ -1,17 +1,15 @@
-let user = {
-    firstname: 'giorgi',
-    lastname: 'saakadze',
-    age: 32,
-    isloggedin: true
-  };
-
-//^* getUserName ფუნქცია დააბრუნებს მომხარებლის FullName-ს თუ isloggedin იქნება true
-function getUserName(user) {
-    if(user.isloggedin) {
-       return `${user.firstname} ${user.lastname}`
-    } 
-       return false;
-    
+function checkNumber(number) {
+  return typeof number === 'number'
+  ? number % 2 === 0 
+  ? 'this number is even'
+  : 'this number is odd'
+  : 'this number is not a number'
 }
-let isFullname = getUserName(user)
-console.log(isFullname)
+
+let isNumberValid1 = 8;
+let isNumberValid2 = 11;
+let isNumberValid3 = true
+
+console.log(checkNumber(isNumberValid1));
+console.log(checkNumber(isNumberValid2));
+console.log(checkNumber(isNumberValid3));

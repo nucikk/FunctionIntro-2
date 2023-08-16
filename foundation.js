@@ -62,3 +62,23 @@ function findMaxNumber(numbers) {
 let maxNumber = findMaxNumber(maxNumArray);
 console.log(maxNumber); //^ Output: 2023
 
+
+//! #TASK5: დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიიღებს ერთ რიცხვს და გამოთვლის გადაცემული მნიშვნელობა კენტია თუ ლუწი;
+//! თუ ლუწია დააბრუნოს - ‘this number is even; თუ კენტია დააბრუნოს - this number is odd;
+
+// ^* ფუნქცია შეამოწმებს არის თუ არა მნიშვნელობა რიცხვი და განსაზღვრავს ლუწია კენტი თუ სხვა რომელიმე ტიპი
+function checkNumberType(number) {
+  return typeof number === 'number'
+  ? number % 2 === 0 
+  ? 'this number is even'
+  : 'this number is odd'
+  : 'this value is not a number'
+}
+
+let isNumberValue1 = 8;
+let isNumberValue2 = 11;
+let isNumberValue3 = "text"
+
+console.log(checkNumberType(isNumberValue1));
+console.log(checkNumberType(isNumberValue2));
+console.log(checkNumberType(isNumberValue3));
