@@ -36,7 +36,7 @@ let user = {
     isloggedin: true
   };
 
-//^* getUserName ფუნქცია დააბრუნებს მომხარებლის FullName-ს თუ isloggedin იქნება true
+// * getUserName ფუნქცია დააბრუნებს მომხარებლის FullName-ს თუ isloggedin იქნება true
 function getUserName(user) {
     if(user.isloggedin) {
        return `${user.firstname} ${user.lastname}`
@@ -64,7 +64,7 @@ console.log(maxNumber); //^ output: 2023
 //! #TASK5: დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიიღებს ერთ რიცხვს და გამოთვლის გადაცემული მნიშვნელობა კენტია თუ ლუწი;
 //! თუ ლუწია დააბრუნოს - ‘this number is even; თუ კენტია დააბრუნოს - this number is odd;
 
-// ^* ფუნქცია შეამოწმებს არის თუ არა მნიშვნელობა რიცხვი და განსაზღვრავს ლუწია კენტი თუ სხვა რომელიმე ტიპი
+// * ფუნქცია შეამოწმებს არის თუ არა მნიშვნელობა რიცხვი და განსაზღვრავს ლუწია კენტი თუ სხვა რომელიმე ტიპი
 function checkNumberType(number) {
   return typeof number === 'number'
   ? number % 2 === 0 
@@ -87,7 +87,7 @@ console.log(checkNumberType(isNumberValue3)); //^ output: this value is not a nu
 let originalArray  = [1,2,3,4,5];
 let reverseArrayNum = []; //& array reversed numbers 
 
-//^*  For Loop - reversed array
+// *  For Loop - reversed array
 for(let i = originalArray.length - 1; i >= 0; i--) {
   reverseArrayNum.push(originalArray[i])      //TODO: -- push() მეთოდი გამოიყენება ახალი მასივის შესაქმნელად ორიგინალური მასივის ელემენტებით, საპირისპირო თანმიმდევრობით.
 }
@@ -115,8 +115,29 @@ let searchedNumArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //& array searched
 for (let i = 0; i < searchedNumArray.length; i++) {
   // * შემოწმდება არის თუ არა ელემენტი 5-ის ტოლი და შემდეგ გაჩერდება
   if(searchedNumArray[i] === 5) {
-    console.log('არის')       //^ output: არის
+    console.log('არის')   //^ output: არის
     break;
   }
 }
 
+//! #TASK9: მოცემულია მასივი გამოიტანეთ ყველა რიცხვი 7 ის გარდა ( continue) - let array5 = [1, 2, 3, 7, 6, 9];
+
+let leftArray = [1, 2, 3, 7, 6, 9]; //& array left 
+let skipValue = 7;
+
+for (let i = 0; i < leftArray.length; i++) {
+  // * შეამოწმებს არის თუ არა მიმდინარე ელემენტი 7ის ტოლი continue მინიჭებით კვლავ გააგრძელებს მუშაობას
+  if (leftArray[i] === 7) {
+      continue;
+  }
+  console.log(leftArray[i]); //^ output: 1 2 3 6 9
+}
+
+// ~ სხვა ვარიანტის for loop
+for (let i = 0; i < leftArray.length; i++) {
+  // * შეამოწმებს უდრის თუ არა მიმდინარე ელემნტი skipValue-ს და გააგეძელებს მუშაობას
+  if (leftArray[i] === skipValue) { 
+    continue; 
+}
+  console.log(leftArray[i]);  //^ output: 1 2 3 6 9
+}
