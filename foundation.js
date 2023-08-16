@@ -9,8 +9,8 @@ let numbersArray1  = [2, -9, 5, 11, -30, 100, -8, -11, -4, 5, -6, 8];
 let calculatePositiveSum  = (...values) =>
   values.filter(value => value > 0).reduce((total, value) => total + value, 0);
 
-// ^* -- დადებითი რიცხვების ჯამის გამოთვლა 
-  let positiveNumSum = calculatePositiveSum (...numbersArray1);
+
+  let positiveNumSum = calculatePositiveSum (...numbersArray1);  // ^* -- დადებითი რიცხვების ჯამის გამოთვლა 
   console.log("დადებითი რიცხვების ჯამი არის: ", positiveNumSum) //^ output: 131
 
 
@@ -19,8 +19,7 @@ let calculatePositiveSum  = (...values) =>
 //& შესაჯამებელი რიცხვების მასივი
 let numbersToSum  = [10, 50, 6, 7, 8, 11, 6, 3, 9];
 
-// ^* ითვლის რიცხვების მასივის ჯამს
-let calculateSum  = (...numbers) => numbers.reduce((sum, num) => sum + num, 0)
+let calculateSum  = (...numbers) => numbers.reduce((sum, num) => sum + num, 0) // ^* ითვლის რიცხვების მასივის ჯამს
 let totalSum = calculateSum(...numbersToSum);
 
 console.log("numbersToSum მასივის რიცხევის ჯამი არის: ",totalSum) //^  output: 110
@@ -84,17 +83,29 @@ console.log(checkNumberType(isNumberValue2)); //^ output: this number is odd
 console.log(checkNumberType(isNumberValue3)); //^ output: this value is not a number
 
 
-
-
 //! #TASK6: მოცემულია მასივი:let array = [1,2,3,4,5]; for ციკლის საშუალებით მიიღეთ reverse ვერისია, ანუ 5,4,3,2,1
 
-let array = [1,2,3,4,5];
+let originalArray  = [1,2,3,4,5];
 //& array reversed numbers 
 let reverseArrayNum = [];
 
 //^*  For Loop - reversed array
-for(let i = array.length - 1; i >= 0; i--) {
-  reverseArrayNum.push(array[i])         //TODO: -- push() მეთოდი გამოიყენება ახალი მასივის შესაქმნელად ორიგინალური მასივის ელემენტებით, საპირისპირო თანმიმდევრობით.
+for(let i = originalArray.length - 1; i >= 0; i--) {
+  reverseArrayNum.push(originalArray[i])         //TODO: -- push() მეთოდი გამოიყენება ახალი მასივის შესაქმნელად ორიგინალური მასივის ელემენტებით, საპირისპირო თანმიმდევრობით.
 }
 
-console.log(reverseArrayNum) //^ output: [ 5, 4, 3, 2, 1 ]
+console.log(reverseArrayNum); //^ output: [ 5, 4, 3, 2, 1 ]
+
+//! #TASK7: ფუნქციის საშუალებით გამოთვალეთ უსერის ასაკი და დაამატეთ შემდეგი პირობა,
+//! თუ გადაცემული ასაკი მეტია 18- ზე დააბრუნეთ - სრულწლოვანი, თუ ნაკელებია  დააბრუნეთ არასწულწლოვანი. 
+//! ეს ამოცანა დაწერეთ arrow function-ით და if ის პირობა ჩაწერეთ ახალი სინტაქსით;
+
+let calculateAge = birthdate => new Date().getFullYear() - birthdate; // ^*  უსერის დაბადების წლის მიხედვით ასაკის გამოთვლა
+let checkAgeStatus = age => (age > 18 ? 'სრულწლოვანი' :'არასრულწლოვანი') // ^* შეამოწმებს უსერის სტატის სრულწლოვანია თუ არა
+
+let birthdate = 2003;
+let userAgeCalculated = calculateAge(birthdate)
+const statusUserAge  = checkAgeStatus(userAgeCalculated);
+
+console.log('მომხმარებლის ასაკის სტატუსი: ', statusUserAge) //^ output: მომხმარებლის ასაკის სტატუსი: სრულწლოვანი
+

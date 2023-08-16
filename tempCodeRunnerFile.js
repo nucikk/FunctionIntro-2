@@ -1,8 +1,8 @@
-let array = [1,2,3,4,5];
-let reverseArrayNum = [];
+let calculateAge = birthdate => new Date().getFullYear() - birthdate; // ^*  უსერის დაბადების წლის მიხედვით ასაკის გამოთვლა
+let checkAgeStatus = age => (age > 18 ? 'სრულწლოვანი' :'არასრულწლოვანი') // ^* შეამოწმებს უსერის სტატის სრულწლოვანია თუ არა
 
-for(let i = array.length - 1; i >= 0; i--) {
-  reverseArrayNum.push(array[i])
-}
+let birthdate = 2003;
+let userAgeCalculated = calculateAge(birthdate)
+const statusUserAge  = checkAgeStatus(userAgeCalculated);
 
-console.log(reverseArrayNum) 
+console.log('მომხმარებლის ასაკის სტატუსი: ', statusUserAge) //^ output: 
