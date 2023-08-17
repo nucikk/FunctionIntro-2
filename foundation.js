@@ -103,7 +103,7 @@ let checkAgeStatus = age => (age > 18 ? 'სრულწლოვანი' :'�
 
 let birthdate = 2003;
 let userAgeCalculated = calculateAge(birthdate)
-const statusUserAge  = checkAgeStatus(userAgeCalculated);
+let statusUserAge  = checkAgeStatus(userAgeCalculated);
 
 console.log('მომხმარებლის ასაკის სტატუსი: ', statusUserAge) //^ output: მომხმარებლის ასაკის სტატუსი: სრულწლოვანი
 
